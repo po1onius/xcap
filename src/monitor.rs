@@ -94,3 +94,6 @@ impl Monitor {
         Ok((VideoRecorder::new(impl_video_recorder), sx))
     }
 }
+
+unsafe impl Sync for Monitor {}
+unsafe impl Send for Monitor {}
